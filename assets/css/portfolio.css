@@ -1,0 +1,304 @@
+:root {
+    --textc: #FCF7F0;
+    --back: #111111;
+    --disabled: #908D8A;
+    --shadow: #41238A;
+    --green: #47E98D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+body {
+    background-color: var(--back);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.box {
+    margin: 20px;
+    border: 1px solid white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-image: url(../img/curves.svg);
+    background-size: 2000px;
+    transition: 0.5s;
+}
+
+.box:hover {
+    box-shadow: 5px 5px 50px var(--shadow),
+        -5px -5px 50px var(--shadow);
+}
+
+/*----------------------------
+------- nav starts ----------
+------------------------------*/
+
+.navbar {
+    z-index: 100;
+    overflow: hidden;
+    margin: auto;
+    /* background-color: rgba(235, 223, 223, 0.2); */
+    padding-top: 25px;
+    width: 100%;
+    height: 100px;
+    left: 0;
+    top: 0;
+    transition: 0.5s;
+
+}
+
+.hide {
+    transform-origin: top;
+    transform: scale(0);
+}
+
+.navbar li.logo {
+    padding-left: 30px;
+}
+
+.navbar li.logo,
+.navbar li.navbar_items {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.navbar li a {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--textc);
+    display: inline-block;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+
+.navbar li.navbar_items a:hover {
+    /* border-bottom-style: solid;
+    border-bottom-color: white;
+       padding-bottom: 5px; */
+}
+
+.navbar li.icon {
+    display: none;
+}
+
+.div_navbar_items {
+    float: right;
+    padding-right: 1%;
+}
+
+
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("navbar_name"). Show the list item that contains the link to open and close the topnav (li.icon) */
+
+@media screen and (max-width:875px) {
+
+    .navbar li.navbar_items {
+        display: none;
+    }
+
+    .navbar li.icon {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 19px;
+
+    }
+
+    .navbar.responsive {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--back);
+        background-image: url(../img/curves.svg);
+        background-size: 2000px;
+        background-position: -1000px 400px;
+        transition: background-color .6s;
+    }
+
+    .navbar.responsive li.logo {
+        float: left;
+        display: block;
+    }
+
+    .navbar.responsive .div_navbar_items {
+        float: none;
+        padding-right: 0;
+        padding-top: 50px;
+    }
+
+    .navbar.responsive li.navbar_items {
+        display: block;
+        padding: 50px;
+        padding-bottom: 0px;
+        font-size: 25px;
+    }
+
+    .navbar.responsive li.navbar_items a {
+        display: block;
+        text-align: center;
+        color: var(--green);
+    }
+
+    .navbar.responsive li.navbar_items a:hover {
+        color: var(--textc);
+        border-bottom-color: transparent;
+
+    }
+
+
+
+}
+
+/*----------------------------
+------- nav ends ----------
+------------------------------*/
+
+
+#portfolio-single {
+    position: relative;
+    height: auto;
+    margin-top: 100px;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 20px;
+    align-items: center;
+    border: 1px solid var(--textc);
+    border-radius: 15px;
+    background-image: url(../img/curves.svg);
+    background-size: 2000px;
+    background-position: -1300px -1000px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+#portfolio-single:hover {
+    box-shadow: 5px 5px 50px var(--shadow),
+        -5px -5px 50px var(--shadow);
+}
+
+#portfolio-single .title {
+    color: var(--disabled);
+    margin-bottom: 50px;
+    margin-left: 20px;
+}
+
+.grid {
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid>div {
+    display: block;
+    width: 350px;
+    height: 300px;
+    background: transparent;
+    overflow: hidden;
+}
+
+.projects {
+    position: relative;
+    border-radius: 10px;
+    margin-left: 20px;
+    border: 1px solid white;
+}
+
+.projects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    background-color: black;
+    border-radius: 10px 10px 0px 0px;
+    opacity: 0.5;
+    transition: all 0.25s;
+    transition-delay: 0.25s;
+    opacity: 0;
+}
+
+.projects:hover::before {
+    opacity: 0.3;
+    transition-delay: 0s;
+}
+
+.projects #visit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: all 0.25s;
+}
+
+.projects:hover #visit {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+}
+
+img {
+    border-radius: 10px 10px 0px 0px;
+    transition: 0.3s;
+}
+
+h2 {
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 5px;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    h1 {
+        font-size: 30px;
+        margin-top: 25%;
+    }
+
+    .grid>div {
+        width: 310px;
+    }
+
+    .projects {
+
+        margin-left: 0px;
+    }
+
+    h2 {
+        color: red;
+    }
+
+    #portfolio-single {
+        margin-top: 10%;
+        padding-left: -26%;
+        padding-right: 0%;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+}

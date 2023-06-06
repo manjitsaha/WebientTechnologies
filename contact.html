@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/img/favicon.png" rel="icon">
+    <link rel="stylesheet" href="./assets/css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <title>Contact</title>
+</head>
+
+<body>
+
+    <div class="navbar">
+
+        <ul style="padding-left: 0px;">
+
+            <li class="logo"> <a href="#"> Webient Technologies </a> </li>
+
+            <section class="div_navbar_items">
+                <li class="navbar_items"> <a href="/"> home </a> </li>
+                <li class="navbar_items"> <a href="./#features"> workstack </a> </li>
+                <li class="navbar_items"> <a href="./#services"> services </a> </li>
+                <li class="navbar_items"> <a href="portfolio.html"> portfolio </a> </li>
+                <li class="navbar_items"> <a href="./#testimonial"> testimonial </a> </li>
+                <li class="navbar_items"> <a href="./#about"> about </a> </li>
+                <li class="navbar_items"> <a href="#" style="color: #47E98D;"> contact </a> </li>
+            </section>
+
+            <li class="icon">
+                <a href="#" onclick="navBarFunction()"> &#9776;</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="contact box">
+        <h1 class="title">Contact</h1>
+        <div class="cont">
+            <div class="details grid">
+                <div class="dbox" id="d1">
+                    <h3 class="dhead">Address</h3>
+                    <h4 class="ddesc">Plot no :- 770, 3rd floor, Udyog vihar phase 5, Gurgaon 122016</h4>
+                </div>
+                <div class="dbox" id="d2">
+                    <h3 class="dhead">Call Us</h3>
+                    <div class="ddesc" id="call">
+                        <a href="tel:+919122443908">+91 9122443908</a>
+                        <br>
+                        <a href="tel:+918700019766">+91 8700019766</a>
+
+                    </div>
+                </div>
+                <div class="dbox" id="d3">
+                    <h3 class="dhead">Mail Us</h3>
+                    <div class="ddesc">
+                        <a href="mailto:support@webienttechnologies.com">support@webienttechnologies.com</a>
+                    </div>
+                </div>
+                <div class="dbox" id="d4">
+                    <h3 class="dhead">Open Hours</h3>
+                    <h4 class="ddesc">
+                        Monday - Friday <br>
+                        09:00 AM - 05:00 PM
+                    </h4>
+                </div>
+            </div>
+            <form method="post" class="contact-form">
+                <div class="row">
+
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="" id="name">
+
+                    <input type="email" class="form-control" name="email" placeholder="Your Email" required=""
+                        id="email">
+                    <input type="text" class="form-control" name="subject" placeholder="Subject" required=""
+                        id="subject">
+
+                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea id="msg">
+
+
+                    <button type="submit" name="contact-us" id="btn">Send Message</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <h1 class="site-title">Webient Technologies</h1>
+        <div class="links">
+            <h2 class="site-links">Useful Links</h2>
+            <div class="linkgrid">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                        <li><a href="/#features">Workstack</a></li>
+                        <li><a href="/#services">Services</a></li>
+                        <li><a href="./portfolio.html">Portfolio</a></li>
+                        <li><a href="/#testimonial">Testimonial</a></li>
+                    </ul>
+
+                    <ul>
+                        <li><a href="/#about">About</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="./termscondition.html">Terms of service</a></li>
+                        <li><a href="./privacypolicy.html">Privacy policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contact">
+            <h2 class="contact-title">Contact Us</h2>
+            <h3 class="address">Plot no :- 770, 3rd floor, Udyog vihar phase 5, Gurgaon 122016</h3>
+        </div>
+
+        <h3 class="copyright">&copy; Copyright Webient Technologies. All Rights Reserved</h3>
+    </div>
+
+    <script src="./assets/js/navbar.js"></script>
+</body>
+
+</html>
